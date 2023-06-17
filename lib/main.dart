@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'gradient_container.dart';
+
 //* main() function gets executed automatically
 //* By Dart, when executing the complied app on the target device
 
@@ -31,35 +33,4 @@ void main() {
       ),
     ),
   );
-}
-
-class GradientContainer extends StatelessWidget {
-  //* super refers to the parent class
-  const GradientContainer({super.key});
-
-  @override
-  //* Called for you, automatically, by Flutter (when it renders the user interface)
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: const BoxDecoration(
-        gradient: LinearGradient(
-          colors: [
-            Colors.lime,
-            Colors.white,
-          ],
-          begin: Alignment.topLeft,
-          end: Alignment.bottomRight,
-        ),
-      ),
-      child: const Center(
-        child: Text(
-          "Hello World!",
-          style: TextStyle(
-            color: Colors.white,
-            fontSize: 28,
-          ),
-        ),
-      ),
-    );
-  }
 }
